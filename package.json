@@ -1,0 +1,32 @@
+{
+  "name": "event-booking",
+  "version": "1.0.0",
+  "description": "This is an event-booking app with graphql",
+  "main": "index.js",
+  "scripts": {
+    "start:server": "npm run --prefix server",
+    "start:client": "npm run --prefix client",
+    "start": "concurrently \"npm run start:server\" \"npm run start:client\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/krishnapramodaradhi/event-booking.git"
+  },
+  "keywords": [
+    "node",
+    "graphql",
+    "react",
+    "express-graphql",
+    "express",
+    "jwt"
+  ],
+  "author": "Prime",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/krishnapramodaradhi/event-booking/issues"
+  },
+  "homepage": "https://github.com/krishnapramodaradhi/event-booking#readme",
+  "devDependencies": {
+    "concurrently": "^5.0.0"
+  }
+}
