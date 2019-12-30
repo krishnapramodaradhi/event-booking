@@ -1,5 +1,6 @@
 const express = require('express');
 const graphqlHTTP = require('express-graphql');
+const cors = require('cors');
 const { json } = require('body-parser');
 const { connect } = require('mongoose');
 
@@ -21,6 +22,12 @@ const { MONGO_USER, MONGO_PASSWORD, MONGO_DB } = process.env;
 })();
 
 const app = express();
+
+app.use(cors({
+  methods: ['GET', 'POST', 'OPTIONS'],
+  allowedHeaders: ['Content-Type', 'Authorization'],
+  optionsSuccessStatus: 200
+}));
 
 app.use(json());
 app.use(

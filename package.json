@@ -4,9 +4,10 @@
   "description": "This is an event-booking app with graphql",
   "main": "index.js",
   "scripts": {
-    "start:server": "npm run --prefix server",
-    "start:client": "npm run --prefix client",
-    "start": "concurrently \"npm run start:server\" \"npm run start:client\""
+    "start:server": "npm start --prefix server",
+    "start:client": "npm start --prefix client",
+    "start": "concurrently \"npm run start:server\" \"npm run start:client\"",
+    "postinstall": "npm i --prefix server && npm i --prefix client"
   },
   "repository": {
     "type": "git",

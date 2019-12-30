@@ -5,7 +5,7 @@ exports.eventSchema = `
   description: String!
   price: Int!
   date: String!
-  creator: String!
+  creator: User!
  }
 
  input EventInput {

@@ -1,4 +1,4 @@
-const { Schema, model, SchemaTypes: {ObjectId} } = require('mongoose');
+const { Schema, model } = require('mongoose');
 
 const eventSchema = new Schema({
  title: {
@@ -18,7 +18,7 @@ const eventSchema = new Schema({
   required: true
  },
  creator: {
-  type: ObjectId,
+  type: Schema.Types.ObjectId,
   ref: 'User'
  }
 });
